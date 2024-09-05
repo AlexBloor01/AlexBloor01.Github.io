@@ -1,0 +1,117 @@
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+span {
+  font-family: "Inter", Verdana, Tahoma;
+  /* font-family: "Jolly Lodger", system-ui; */
+  letter-spacing: 0.3rem;
+
+}
+
+h4 {
+  font-weight: 200;
+  letter-spacing: 0.5rem;
+}
+
+a {
+  font-size: 1.25rem;
+  color: rgb(0, 200, 255);
+}
+
+a:hover {
+  color: rgb(89, 24, 135);
+}
+
+a:active {
+  color: rgb(238, 0, 255);
+}
+
+/* Use for Lines */
+span {
+  font-size: 1.25rem;
+  font-weight: lighter;
+}
+
+p {
+  font-size: 1.25rem;
+  letter-spacing: 0.5rem;
+  word-spacing: 0.3rem;
+
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: lighter;
+  letter-spacing: 0.1rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.light {
+  font-weight: lighter;
+}
+
+.largeLH {
+  line-height: 3rem;
+}
+
+.navTextSpacing {
+  letter-spacing: 1rem;
+}
+
+.noTextDec {
+  text-decoration: none;
+}
+
+.textAlignLast {
+  text-align-last: right;
+}
+
+.sectionDivider {
+  font-size: 2rem;
+}
+
+/* Overview Pages */
+.page-specific-overview p,
+.page-specific-overview h1,
+.page-specific-overview h2,
+.page-specific-overview h3,
+.page-specific-overview h4,
+.page-specific-overview a,
+.page-specific-overview li,
+.page-specific-overview span {
+  font-family: "Roboto", Verdana, Tahoma;
+  font-weight: 400;
+  line-height: 1.5rem;
+  letter-spacing: 0.05rem;
+  word-spacing: 0.1rem;
+}
+
+.page-specific-overview li {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 2rem;
+  letter-spacing: 0.05rem;
+  word-spacing: 0.1rem;
+}
+
+.textSpace {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.addTopTextMargin {
+  margin: 0;
+  padding: 0;
+  padding-top: 1.5rem;
+}
+
+.list {
+  line-height: 1.3rem;
+  margin-left: 1rem;
+}

@@ -1,0 +1,203 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* =================================================================================================== */
+
+/* Nav */
+/* Shadow under navbar */
+.navShadow {
+  filter: drop-shadow(0px 0.25rem 0.25rem #00000050);
+}
+
+/* Divider between nav buttons */
+.navDivider {
+  padding: 0rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Edited over bootstrap navbar-brand*/
+.navbar-brand {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+/* Edited over bootstrap navbar*/
+.navbar {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 6.25rem;
+  /* position: fixed; */
+  position: fixed;
+  z-index: 1000;
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+
+}
+
+/* This makes the cursor a pointer */
+.navbar-brand {
+  cursor: pointer;
+}
+
+/* =================================================================================================== */
+
+/* Section */
+.introSection {
+  height: 40rem;
+  padding-top: 20rem;
+  /* margin-bottom: 5rem; */
+
+  background-color: #1a1816;
+}
+
+footer {
+  padding: 20px;
+  margin: 0;
+  background-color: #292929;
+}
+
+
+.linkButton {
+  width: 32rem;
+  height: 17rem;
+  margin: 1.25rem;
+  margin-top: 2.4rem;
+  border-radius: 1rem;
+  background-color: #00f7ff00;
+  border-color: #00000000;
+  /* background-color: #00d5ff; */
+}
+
+.linkObj {
+  margin: 0.5rem;
+  padding-top: 1rem;
+  width: 36rem;
+  height: 22rem;
+  /* background-color: #ff0000; */
+}
+
+.top-left-image {
+  /* position: relative; */
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  /* background-color: #d4ff00; */
+}
+
+.outline {
+  border-width: 0.25rem;
+  border-style: solid;
+}
+
+.outline img:hover {
+  border-width: 0.2rem;
+  border-color: #F3F3F3;
+}
+
+.outline img {
+  width: 34rem;
+  height: 18rem;
+  object-fit: fill;
+  filter: drop-shadow(0px 0.25rem 0.25rem #00000050);
+  z-index: 100;
+
+  /* Border */
+  border-width: 0.25rem;
+  /* border-width: 0.2rem; */
+
+  /* border-radius: 1rem; */
+  border-style: solid;
+  border-color: #ff880000;
+}
+
+.img64 {
+  width: 64px;
+  height: 64px;
+  z-index: 150;
+}
+
+.img48 {
+  width: 48px;
+  height: 48px;
+  z-index: 150;
+}
+
+/* =================================================================================================== */
+
+/* Colors */
+/* Light Theme */
+.headerColor {
+  background-color: #E3E3E3;
+}
+
+.footerColor {
+  background-color: #c4bfbd;
+}
+
+.backgroundColor {
+  background-color: #F3F3F3;
+}
+
+.fontColor {
+  color: #090A0B;
+}
+
+.outlineColor {
+  border-color: #FF8A00;
+}
+
+/* Dark Theme */
+.headerColor {
+  background-color: #525252;
+  background-color: #1a1816;
+}
+
+.footerColor {
+  background-color: #292929;
+}
+
+.backgroundColor {
+  background-color: #454545;
+}
+
+.fontColor {
+  color: #F6F5F4;
+}
+
+.lineShadow {
+
+  text-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* =================================================================================================== */
+
+/* Overview Pages */
+.Imgfluid {
+  /* max-width: 100%; */
+  /* height: auto; */
+  width: 100%;
+}
+
+/* Testing */
+.test {
+
+  background-color: #ff0cdb;
+}
+
+.imgCenter {
+
+  padding: 3% 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}

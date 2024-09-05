@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Bloor Portfolio</title>
+    <meta name="Alex Bloor Games Programming Developer Portfolio" content="Unnamed Game Project">
+
+    <!-- Icon -->
+    <link rel="icon" type="" href="images/icons/Portfolio_Icon_64.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/text.css">
+
+    <!-- Fonts -->
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
+    <!-- Jolly Lodger -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jolly+Lodger&display=swap" rel="stylesheet">
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+        crossorigin="anonymous"></script>
+    <script src="/script.js"></script>
+
+</head>
+
+
+<body class="backgroundColor fontColor">
+
+    <div id="nav"></div>
+
+    <div class="container ">
+        <section class="col pt-5">
+            <row>
+                <main class="">
+                    <div class="row page-specific-overview">
+                        <!-- Page Title -->
+                        <div class="textSpace text-center">
+                            <h3 class=" textShadow ">Ghost Maze</h3>
+                            <h5 class="light">Last updated: 15st March, 2024</h5>
+                        </div>
+
+                        <!-- Page Text -->
+                        <div class="col">
+
+                            <section>
+                                <!-- <h4 class="textSpace ">Key Details</h4> -->
+                                <p class="textSpace text-center">Ghost Maze was an experimental mobile game project to
+                                    learn
+                                    some more
+                                    classic game mechanics.</p>
+
+                                <h3 class="textSpace pt-5">Prim's Algorithm for Maze Generation</h3>
+
+                                <p class="textSpace">Prim's Algorithm is a popular method for procedurally generating a
+                                    maze
+                                    by expanding a tree
+                                    structure from a random starting point. Here's a step-by-step breakdown:</p>
+
+                                <div class="list">
+                                    <li><strong>Select Starting Node:</strong> Choose an initial node, which can be any
+                                        node
+                                        within the grid.</li>
+                                    <li><strong>Choose Smallest Weight:</strong> Randomly select the connected node with
+                                        the
+                                        smallest weight from the
+                                        current node's neighbors.</li>
+                                    <li><strong>Add Node to Tree:</strong> Add the chosen node to the maze (tree
+                                        structure),
+                                        marking it as part of the
+                                        solution.</li>
+                                    <li><strong>Repeat:</strong> Continue the process by repeating steps 2 and 3 until
+                                        all
+                                        nodes have been added to the
+                                        maze.</li>
+                                </div>
+
+                                <p class="textSpace">This process is implemented in code as follows:</p>
+
+
+                                <p class="textSpace">
+                                    The function <code>FirstGenerationStep()</code> initializes the first cell at the
+                                    maze's
+                                    edge. From there, the
+                                    <code>Generate()</code> function takes over, repeatedly invoking
+                                    <code>NextGenerationStep()</code> to apply steps 2
+                                    and 3 until the maze is complete.
+                                </p>
+                            </section>
+
+
+                            <section>
+                                <h3 class="textSpace pt-5">Initialization of Maze Generation</h3>
+
+                                <p class="textSpace">The maze generation begins by setting up a grid based on the game's
+                                    dimensions. The starting point of the maze is
+                                    selected randomly from the edge of the grid, ensuring randomness and replayability
+                                    in each game.</p>
+                                <p class="textSpace">The <code>Generate()</code> function uses a coroutine to control
+                                    the speed and pace of cell generation. It checks if the maze is
+                                    complete or continues generating cells.</p>
+
+                                <div><img class="Imgfluid imgCenter" src="/images/screenshots/Ghost Maze/Generate.png"
+                                        alt=""></div>
+
+                            </section>
+
+                            <section>
+                                <h3 class="textSpace pt-5">Creating a Cell</h3>
+
+                                <p class="textSpace">This method spawns a new cell in the maze grid, ensuring each cell
+                                    has a unique position and updates the list of active
+                                    cells.</p>
+
+                                <div><img class="Imgfluid imgCenter"
+                                        src="/images/screenshots/Ghost Maze/Create Cell.png" alt=""></div>
+
+                            </section>
+
+                            <section>
+                                <h3 class="textSpace pt-5">Creating a Cell</h3>
+
+                                <p class="textSpace">After each cell is placed, the generator randomly selects a
+                                    direction to move and places a new cell. If it encounters a
+                                    dead-end or max move attempts are reached, it backtracks to a previous cell to
+                                    continue.</p>
+
+                                <div><img class="Imgfluid imgCenter"
+                                        src="/images/screenshots/Ghost Maze/Next Grid Point.png" alt=""></div>
+
+                            </section>
+
+
+
+                            <section>
+                                <h3 class="textSpace pt-5">Essential Scripts</h3>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="textSpace">Each cell is setup with pathfinding variables and a walls
+                                            script which allows us to see which connecting direction we can move next
+                                            with our MazeDirections class.</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="textSpace">Maze Directions contains the logic for finding out which
+                                            direction (North, East, South, West) the current maze is heading, by using
+                                            an enum we can easily convert 0 - 3 to movement
+                                            directions within the grid with <code>ToIntVector2</code></p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-6"><img class="Imgfluid"
+                                            src="/images/screenshots/Ghost Maze/Cell.png" alt="">
+                                    </div>
+                                    <div class="col-6"><img class="Imgfluid"
+                                            src="/images/screenshots/Ghost Maze/Movement Direction.png" alt=""></div>
+
+                                </div>
+                            </section>
+
+                            <h3 class="textSpace pt-5">State Machine for Enemy AI</h3>
+
+                            <p class="textSpace ">The Enemy AI in Ghost Maze utilizes a state machine to
+                                manage different behaviors
+                                and reactions based on the player's presence. This implementation allows for dynamic and
+                                responsive enemy
+                                actions within the game.</p>
+
+                            <p class="textSpace">The state machine in the EnemyController script governs the enemy's
+                                behavior through various
+                                states. Each state defines specific actions and transitions based on the game's context.
+                                Here's a detailed
+                                breakdown of how each state functions:</p>
+
+                            <div class="list">
+                                <li><strong>Patrolling:</strong> The enemy moves along a predefined path, checking each
+                                    position in order. The
+                                    patrol path is set based on the enemy type, and the movement is managed by
+                                    pathfinding.</li>
+                                <li><strong>Alert:</strong> When the player is close but not fully detected, the enemy
+                                    becomes alert and faces
+                                    the player. If the player remains visible for a set duration, the enemy transitions
+                                    to the chase state.</li>
+                                <li><strong>Chase:</strong> If the player is detected, the enemy pursues them with
+                                    increased speed. The enemy
+                                    will attempt to attack the player if within range, and will wait after an attack
+                                    before resuming the chase.
+                                </li>
+                                <li><strong>Search:</strong> When the player escapes, the enemy searches the area in a
+                                    predefined pattern. If
+                                    the player is spotted during the search, the enemy resumes the chase; otherwise, it
+                                    returns to patrolling.
+                                </li>
+                            </div>
+
+                            <p class="textSpace">The state machine is implemented in code as follows:</p>
+
+                            <p class="textSpace">
+                                The <code>ChangeState()</code> method is used to switch between different enemy states.
+                                Each state has its own
+                                coroutine:
+                            <ul>
+                                <li><code>Patrolling()</code>: Manages the enemy's movement along the patrol path.</li>
+                                <li><code>Alert()</code>: Handles the enemy's behavior when the player is near but not
+                                    fully detected.</li>
+                                <li><code>Chasing()</code>: Controls the enemy's pursuit of the player and attack logic.
+                                </li>
+                                <li><code>Searching()</code>: Manages the search behavior when the player is lost.</li>
+                            </ul>
+                            </p>
+
+                            <p class="textSpace">
+                                The enemy's visibility and state transitions are managed by the
+                                <code>UpdatePlayerVisibility()</code> method,
+                                which determines whether the enemy should chase, search, or return to patrol based on
+                                the player's visibility
+                                and distance.
+                            </p>
+
+                            <section>
+                                <h3 class="textSpace pt-5">State Machine Setup</h3>
+
+                                <p class="textSpace">
+                                    Transitions the state machine between different states and the setup of possible
+                                    states.
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-6"><img class=" imgCenter"
+                                            src="/images/screenshots/Ghost Maze/state handling.png" alt=""></div>
+
+                                    <div class="col-6"><img class=" imgCenter"
+                                            src="/images/screenshots/Ghost Maze/Enum.png" alt=""></div>
+
+                                </div>
+                            </section>
+
+                            <section>
+                                <h3 class="textSpace pt-5">Patrolling Behavior</h3>
+
+                                <p class="textSpace">
+                                    The enemy follows a predefined path while patrolling.
+                                </p>
+
+                                <img class=" imgCenter" src="/images/screenshots/Ghost Maze/Patrol State.png" alt="">
+                            </section>
+
+                            <section>
+                                <h3 class="textSpace pt-5">Chasing Behavior</h3>
+
+                                <p class="textSpace">
+                                    When the enemy detects the player, it switches to the
+                                    chasing state.
+                                </p>
+
+                                <div class="row">
+                                    <div class="col-6"><img class="Imgfluid"
+                                            src="/images/screenshots/Ghost Maze/Chase State.png" alt=""></div>
+
+                                    <div class="col-6"><img class="Imgfluid "
+                                            src="/images/screenshots/Ghost Maze/Attack.png" alt=""></div>
+
+                                </div>
+                            </section>
+
+                            <section>
+                                <h3 class="textSpace pt-5">Searching Behavior</h3>
+
+                                <p class="textSpace">
+                                    If the enemy loses sight of the player, it will search the
+                                    area for a brief period.
+                                </p>
+
+                                <div class=""><img class="Imgfluid imgCenter"
+                                        src="/images/screenshots/Ghost Maze/Searching.png" alt=""></div>
+                            </section>
+
+
+                        </div>
+                    </div>
+
+                    <div class="row sectionDivider pt-5">
+                        <div class="col">
+                            <!-- <span  class="lineShadow" style="letter-spacing: 0px;">________________________________________________________________________________________________________________________________</span> -->
+                        </div>
+                    </div>
+
+
+                </main>
+            </row>
+        </section>
+
+    </div>
+    <div id="footer"></div>
+
+</body>
+
+
+</html>
