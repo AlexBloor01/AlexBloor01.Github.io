@@ -107,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the current page's file name.
     const currentPage = window.location.pathname;
 
-    console.log(currentPage);
+    // console.log(currentPage);
 
 
     // Log the current page path to debug.
