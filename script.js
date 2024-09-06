@@ -43,7 +43,7 @@ window.addEventListener('DOMContentLoaded', function () {
         const banner = document.createElement('div');
         banner.id = 'cookie-consent-banner';
         banner.innerHTML = `
-            <h6 class="pb-2">This site uses cookies to enhance your experience. By continuing to browse, you consent to our use of
+            <h6 class="pb-2">This site uses cookies to enhance your experience. Do you consent to our use of
                 cookies.
             </h6>
             <button id="accept-cookies">Accept</button>
