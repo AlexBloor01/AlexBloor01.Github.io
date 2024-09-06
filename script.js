@@ -1,6 +1,5 @@
 'use strict';
 
-
 //Smooth Lerp to selected element ID
 function ScrollToElement(elementID) {
     const element = document.getElementById(elementID);
@@ -112,10 +111,12 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Current page path:", currentPage);
 
     // Check if the current page is not the index page, index page will have minimal javascript just in case.
-    if (!currentPage.endsWith("index.html")) {
+    if (!currentPage.endsWith("index.html") && !currentPage.endsWith(".io") && !currentPage.endsWith(".io/")) {
+
         console.log("Not the index page, adding elements...");
         AddRepeatElement("nav");
         AddRepeatElement("footer");
+
     } else {
         console.log("On the index page, skipping nav/footer injection.");
     }
