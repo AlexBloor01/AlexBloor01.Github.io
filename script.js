@@ -44,7 +44,7 @@ window.addEventListener('DOMContentLoaded', function () {
         banner.id = 'cookie-consent-banner';
         banner.innerHTML = `
             <h6 class="pb-2">This site uses cookies to enhance your experience. Do you consent to our use of
-                cookies.
+                cookies?
             </h6>
             <button id="accept-cookies">Accept</button>
             <button id="decline-cookies">Decline</button>
