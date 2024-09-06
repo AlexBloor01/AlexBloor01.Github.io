@@ -107,11 +107,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get the current page's file name.
     const currentPage = window.location.pathname;
 
+    console.log(currentPage);
+
+
     // Log the current page path to debug.
     console.log("Current page path:", currentPage);
 
     // Check if the current page is not the index page, index page will have minimal javascript just in case.
-    if (!currentPage.endsWith("index.html") && !currentPage.endsWith(".io") && !currentPage.endsWith("")) {
+    if (!currentPage.endsWith("index.html") && !currentPage.endsWith("/")) {
 
         console.log("Not the index page, adding elements...");
         AddRepeatElement("nav");
