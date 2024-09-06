@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("Current page path:", currentPage);
 
     // Check if the current page is not the index page, index page will have minimal javascript just in case.
-    if (!currentPage.endsWith("index.html") && !currentPage.endsWith(".io") && !currentPage.endsWith(".io/")) {
+    if (!currentPage.endsWith("index.html") && !currentPage.endsWith(".io") && !currentPage.endsWith("")) {
 
         console.log("Not the index page, adding elements...");
         AddRepeatElement("nav");
